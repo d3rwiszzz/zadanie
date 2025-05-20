@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stytleport.css">
+    <style>
+        .navigation-buttons {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            width: 100%;
+        }
+
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #bb1e3d;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-message">Bartek Derwisz</div>
+    <div class="navigation-buttons">
+        <button class="nav-button" id="prev-slide">Previous</button>
+        <button class="nav-button" id="next-slide">Next</button>
+    </div>
+
+    <script>
+        const slides = [
+            "Bartek Derwisz",
+            "Co robie: instagram model",
+            "Osiagniecia zyciowe:",
+            "",
+            " ",
+            "uhh",
+            "zapomnialem",
+        ];
+
+        let currentSlide = 0;
+
+        const messageElement = document.querySelector(".animated-message");
+        const prevButton = document.getElementById("prev-slide");
+        const nextButton = document.getElementById("next-slide");
+
+        function updateSlide() {
+            messageElement.textContent = slides[currentSlide];
+        }
+
+        prevButton.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % slides.length; 
+            updateSlide();
+        });
+
+
+        updateSlide();
+    </script>
+</body>
+</html>

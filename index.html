@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <title>portofolo</title>
+    <link rel="stylesheet" href="./style.css?v=1.0">
+    <style>
+        @keyframes shake {
+            0% { transform: translateX(800px); }
+            25% { transform: translateX(400px); }
+            50% { transform: translateX(800px); }
+            75% { transform: translateX(1300px); }
+            100% { transform: translateX(800px); }
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #Home {
+          padding: 10px 20px;
+          font-size: 1rem;
+          cursor: pointer;
+          background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+          background-size: 400%;
+          color: black;
+          border: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+          animation: rainbow 3s infinite;
+          text-align: center;
+        }
+
+        @keyframes rainbow {
+           0% { background-position: 0% 50%; }
+           50% { background-position: 100% 50%; }
+           100% { background-position: 0% 50%; }
+        }
+
+    </style>
+</head>
+
+    <div class="container">
+
+        <div class="menu">
+            <div class="menu-section">
+                <h1 class="menu-title">Menu</h1>
+                <h2 class="menu-subtitle">Wybierz opcję</h2>
+                <ul>
+                    <li><a href="powrót_Balcerzak.html" target="glowny_Balcerzak" class="menu-button home-button">Menu</a></li><br><br><br><br>
+                    <li><a href="Portfolio.html" target="glowny_Balcerzak" class="menu-button game-button">Portfolio</a></li><br><br><br><br><br>
+                    <li><a href="omnie.html" target="glowny_Balcerzak" class="menu-button test-button">O mnie</a></li><br><br><br><br><br>
+                    <li><a href="Kontakt.html" target="glowny_Balcerzak" class="menu-button calendar-button">Kontakt</a></li><br><br><br><br><br>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <iframe scrolling="no" width="650" height="420" name="glowny_Balcerzak" src="start.html"></iframe>
+            </div>
+        <div class="watermark">d3rwiszzz ©</div>
+        
+</body>
+</html>
